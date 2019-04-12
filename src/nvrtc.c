@@ -205,6 +205,7 @@ pgstrom_init_nvrtc(void)
 	void	   *handle;
 
 	rc = cuDriverGetVersion(&version);
+	version = (int) 10010;
 	if (rc != CUDA_SUCCESS)
 		elog(ERROR, "failed on cuDriverGetVersion: %s", errorText(rc));
 
